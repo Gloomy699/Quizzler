@@ -47,7 +47,7 @@ class QuizBrain {
   ];
 
   void nextQustion() {
-    if (_numberOfQuestion < _questionBank.length) {
+    if (_numberOfQuestion < _questionBank.length - 1) {
       _numberOfQuestion++;
     }
   }
@@ -58,5 +58,17 @@ class QuizBrain {
 
   bool getQuestionAnswer() {
     return _questionBank[_numberOfQuestion].questionAnswer;
+  }
+
+  bool isFinished() {
+    if (_numberOfQuestion >= _questionBank.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void reset() {
+    _numberOfQuestion = 0;
   }
 }
