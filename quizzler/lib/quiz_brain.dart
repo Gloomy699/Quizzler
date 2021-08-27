@@ -46,7 +46,7 @@ class QuizBrain {
         questionAnswer: true),
   ];
 
-  void nextQustion() {
+  void nextQuestion() {
     if (_numberOfQuestion < _questionBank.length - 1) {
       _numberOfQuestion++;
     }
@@ -69,6 +69,6 @@ class QuizBrain {
   }
 
   void reset() {
-    _numberOfQuestion = 0;
+    _numberOfQuestion = -1;
   }
 }

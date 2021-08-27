@@ -28,7 +28,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  void changeQustion() => quizBrain.nextQustion();
+  void changeQuestion() => quizBrain.nextQuestion();
 
   void addCheckMarkTrue() {
     scoreKeeper.add(
@@ -67,7 +67,7 @@ class _QuizPageState extends State<QuizPage> {
         }
       }
 
-      changeQustion();
+      changeQuestion();
     });
   }
 
