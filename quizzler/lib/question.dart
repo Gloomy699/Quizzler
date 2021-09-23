@@ -1,9 +1,9 @@
 class Question {
-  String questionText;
-  bool questionAnswer;
+  final String text;
+  final bool answer;
 
-  Question({
-    required this.questionText,
-    required this.questionAnswer,
+  const Question({
+    required this.text,
+    required this.answer,
   });
 }

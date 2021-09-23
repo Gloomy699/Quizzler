@@ -5,58 +5,58 @@ class QuizBrain {
 
   final _questionBank = <Question>[
     Question(
-      questionText: 'You can lead a cow down stairs but not up stairs.',
-      questionAnswer: false,
+      text: 'You can lead a cow down stairs but not up stairs.',
+      answer: false,
     ),
     Question(
-      questionText: 'Approximately one quarter of human bones are in the feet.',
-      questionAnswer: true,
+      text: 'Approximately one quarter of human bones are in the feet.',
+      answer: true,
     ),
     Question(
-      questionText: 'A slug\'s blood is green.',
-      questionAnswer: true,
+      text: 'A slug\'s blood is green.',
+      answer: true,
     ),
     Question(
-      questionText: 'Buzz Aldrin\'s mother\'s maiden name was \"Moon\".',
-      questionAnswer: true,
+      text: 'Buzz Aldrin\'s mother\'s maiden name was \"Moon\".',
+      answer: true,
     ),
     Question(
-      questionText: 'It is illegal to pee in the Ocean in Portugal.',
-      questionAnswer: true,
+      text: 'It is illegal to pee in the Ocean in Portugal.',
+      answer: true,
     ),
     Question(
-      questionText:
+      text:
           'No piece of square dry paper can be folded in half more than 7 times.',
-      questionAnswer: false,
+      answer: false,
     ),
     Question(
-      questionText:
+      text:
           'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-      questionAnswer: true,
+      answer: true,
     ),
     Question(
-      questionText:
+      text:
           'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-      questionAnswer: false,
+      answer: false,
     ),
     Question(
-      questionText:
+      text:
           'The total surface area of two human lungs is approximately 70 square metres.',
-      questionAnswer: true,
+      answer: true,
     ),
     Question(
-      questionText: 'Google was originally called \"Backrub\".',
-      questionAnswer: true,
+      text: 'Google was originally called \"Backrub\".',
+      answer: true,
     ),
     Question(
-      questionText:
+      text:
           'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
-      questionAnswer: true,
+      answer: true,
     ),
     Question(
-      questionText:
+      text:
           'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
-      questionAnswer: true,
+      answer: true,
     ),
   ];
 
@@ -66,23 +66,18 @@ class QuizBrain {
     }
   }
 
-  String getQuestionText() {
-    return _questionBank[_numberOfQuestion].questionText;
-  }
+  // String getQuestionText() => _questionBank[_numberOfQuestion].text;
+  String get questionText => _questionBank[_numberOfQuestion].text;
 
-  bool getQuestionAnswer() {
-    return _questionBank[_numberOfQuestion].questionAnswer;
-  }
+  // bool getQuestionAnswer() => _questionBank[_numberOfQuestion].answer;
+  bool get QuestionAnswer => _questionBank[_numberOfQuestion].answer;
 
-  bool isFinished() {
-    if (_numberOfQuestion >= _questionBank.length - 1) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  bool isFinished() => _numberOfQuestion >= _questionBank.length - 1;
+  // if (_numberOfQuestion >= _questionBank.length - 1) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 
-  void reset() {
-    _numberOfQuestion = -1;
-  }
+  void reset() => _numberOfQuestion = -1;
 }
